@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/volla/yggdrasil
+DEVICE_PATH := device/planet/cosmocom
 
-BOARD_VENDOR := volla
+BOARD_VENDOR := planet
 
 # APEX
 TARGET_FLATTEN_APEX := true
@@ -36,8 +36,8 @@ BOARD_AVB_ENABLE := false
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
-TARGET_BOARD_PLATFORM := mt6763
-TARGET_BOOTLOADER_BOARD_NAME := mt6763
+TARGET_BOARD_PLATFORM := mt6771
+TARGET_BOOTLOADER_BOARD_NAME := mt6771
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -59,8 +59,8 @@ BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/volla/mt6763
-TARGET_KERNEL_CONFIG := k63v2_64_bsp_defconfig
+TARGET_KERNEL_SOURCE := kernel/planet/mt6771
+TARGET_KERNEL_CONFIG := k71v1_64_bsp_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -90,7 +90,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_NO_RECOVERY := false
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6763
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6771
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
@@ -99,7 +99,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Soong
-PRODUCT_SOONG_NAMESPACES += vendor/volla/yggdrasil
+PRODUCT_SOONG_NAMESPACES += vendor/planet/cosmocom
 
 # Treble
 BOARD_VNDK_VERSION := current

@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),yggdrasil)
+ifeq ($(TARGET_DEVICE),cosmocom)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

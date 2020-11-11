@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Get non-open-source specific aspects
-#$(call inherit-product-if-exists, vendor/volla/yggdrasil/yggdrasil-vendor.mk)
+#$(call inherit-product-if-exists, vendor/planet/cosmocom/cosmocom-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -27,10 +27,9 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    Snap
 
-# Init cripts
+# Fstab
 PRODUCT_PACKAGES += \
-    init.mt6763.rc \
-    fstab.mt6763
+    fstab.mt6771
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -38,10 +37,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/mtk-pad.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/mtk-pad.idc \
     $(LOCAL_PATH)/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/ACCDET.kl \
     $(LOCAL_PATH)/keylayout/mtk-kpd.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mtk-kpd.kl
-
-# Overlay
-# PRODUCT_PACKAGES += \
-#    DummyOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
