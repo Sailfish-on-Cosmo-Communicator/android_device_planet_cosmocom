@@ -29,7 +29,8 @@ PRODUCT_PACKAGES += \
 
 # Fstab
 PRODUCT_PACKAGES += \
-    fstab.mt6771
+    fstab.mt6771 \
+    ueventd.mt6771.rc
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
